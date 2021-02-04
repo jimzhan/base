@@ -16,6 +16,9 @@
   },
   "scripts": {
     "lint": "eslint --ext .js --fix src",
+    "knex": "knex",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
     "start": "node --experimental-specifier-resolution=node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,6 +38,7 @@
     "config": "^3.3.3",
     "fastify": "^3.11.0",
     "knex": "^0.21.17",
+    "mysql2": "^2.2.5",
     "objection": "^2.2.14"
   },
   "devDependencies": {
