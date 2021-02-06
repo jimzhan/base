@@ -9,11 +9,11 @@ module.exports = {
     client: 'mysql2',
     asyncStackTraces: true,
     connection: {
-      host: '192.168.10.10',
+      host: '127.0.0.1',
       port: 3306,
-      user: 'root',
+      user: 'funbox',
       database: 'funbox',
-      password: 'funbox.me',
+      password: 'funbox',
       charset: 'utf8mb4',
     },
     pool: {

@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: funbox.me
+      MYSQL_DATABASE: funbox
+      MYSQL_USER: funbox
+      MYSQL_PASSWORD: funbox
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    restart: on-failure
+    volumes:
+      - ${HOME}/var/lib/mysql:/var/lib/mysql

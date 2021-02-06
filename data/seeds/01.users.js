@@ -1,2 +1,2 @@
-exports.seed = function (knex) {
+export const seed = (knex) => {
 };
