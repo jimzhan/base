@@ -10,6 +10,7 @@ export default {
   },
   verbose: true,
   nodeArguments: [
+    '--experimental-modules',
     '--experimental-specifier-resolution=node',
   ],
 };
