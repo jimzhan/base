@@ -1,56 +1,30 @@
 {
   "name": "base",
+  "private": true,
   "version": "1.0.0",
   "description": "Basic application boilerplate for SPA and SSR",
-  "type": "module",
-  "main": "index.js",
-  "nodemonConfig": {
-    "watch": [
-      "config",
-      "src"
-    ],
-    "ignore": [
-      "*.spec.js"
-    ],
-    "delay": "10"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "lint": "eslint --ext .js --fix data src",
-    "knex": "knex",
-    "migrate": "knex migrate:latest",
-    "seed": "knex seed:run",
-    "start": "node --experimental-specifier-resolution=node -r dotenv/config src/index.js",
-    "test": "nyc ava"
+    "test": "yarn workspaces run test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jimzhan/base.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jim Zhan <jim.zhan@me.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jimzhan/base/issues"
   },
   "homepage": "https://github.com/jimzhan/base#readme",
-  "dependencies": {
-    "bson": "^4.2.2",
-    "config": "^3.3.3",
-    "dotenv": "^8.2.0",
-    "fastify": "^3.11.0",
-    "knex": "^0.21.17",
-    "mysql2": "^2.2.5",
-    "objection": "^2.2.14"
-  },
   "devDependencies": {
-    "ava": "^3.15.0",
-    "eslint": "^7.19.0",
-    "eslint-config-airbnb": "^18.2.1",
+    "eslint": "^7.20.0",
+    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "nodemon": "^2.0.7",
-    "nyc": "^15.1.0"
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
   }
 }
